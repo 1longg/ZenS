@@ -1,4 +1,7 @@
+import Head from "@/Components/Head";
 import "./globals.css";
+import Main from "@/Components/Main";
+import Footer from "@/Components/Footer";
 
 export const metadata = {
   title: "Next.js",
@@ -12,7 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="h-screen bg-white flex flex-col  py-4">
+          <Head />
+          <Main />
+          {children}
+          <Footer />
+          <div className="py-8 text-center w-full text-slate-600">
+            Copyright 2021 HLS
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

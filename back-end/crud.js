@@ -23,6 +23,7 @@ const readArticles = (db, id) => {
 
 
 const updateUser = (db, user_id, article_id) => {
+  console.log('upadate', user_id, article_id)
   const query = `UPDATE users SET a${article_id} = true WHERE id = ?`;
   db.runQuery(query, [user_id]);
 };
